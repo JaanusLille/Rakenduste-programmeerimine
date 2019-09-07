@@ -1,2 +1,2 @@
 ﻿Siia tulevad üksikasjad
-siia ka
+siia ka;
