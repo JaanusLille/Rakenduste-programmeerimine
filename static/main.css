@@ -39,7 +39,7 @@
       color: #e68e3c;
       font-size: 12px;
     }
-    .content a {
+    .content h {
       display: flex;
       justify-content: space-around;
       text-decoration: none;
