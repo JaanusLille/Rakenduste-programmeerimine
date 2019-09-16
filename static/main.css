@@ -18,6 +18,10 @@
       display: flex;
       justify-content: space-between;
     }
+    .content{
+      display: flex;
+      justify-content: space-around;
+    }
     .item{
       box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
@@ -39,8 +43,9 @@
       color: #e68e3c;
       font-size: 12px;
     }
-    .content h {
-      display: flex;
-      justify-content: space-around;
+    .content a {
       text-decoration: none;
+    }
+    .itemContainer .item__image{
+      width: 200px;
     }

@@ -4,18 +4,7 @@
   <meta charset="UTF-8">
   <title>Rakenduste-Programmeerimine - Toote leht</title>
   <link href="./main.css" rel="stylesheet">
-
-  <script>
-    // alert("Hello world, item page!");
-    const x = window.location;
-    console.log(x);
-    const urlParams = new URLSearchParams(window.location.search);
-    const title = urlParams.get("title");
-    const cost = urlParams.get("cost");
-    const src = urlParams.get("src");
-    console.log(title, cost, src);
-    alert(`Title: ${title} cost: ${cost} path: ${src}`);
-  </script>
+  <script src="./item.js"></script>
 </head>
   <body>
     <div class="header">
@@ -29,7 +18,7 @@
         <button>Cart</button>
       </div>
     </div>
-      <div class="content">
+      <div class="content" id="item-body">
         Olen toote leht
       </div>
     
