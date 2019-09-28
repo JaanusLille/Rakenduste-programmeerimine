@@ -1,2 +1,2 @@
-﻿Siia tulevad üksikasjad
-siia ka;
+heroku rakenduse url:
+https://rakenduste-programmeerimine.herokuapp.com/
