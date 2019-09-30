@@ -6,11 +6,10 @@ const categories = {
   LAPTOP: "laptops",
 };
 
-let selectCategory = categories.PHONE;
+let selectedCategory = categories.PHONE;
 
 function createItems(){
 
-  // console.log("createitems", selectedCategory);
   const root = document.getElementById("item-list");
 
   root.innerHTML = null;
@@ -19,14 +18,11 @@ function createItems(){
 
   if(selectedCategory === categories.PHONE){
     items = phones;
-    // console.log("set phones");
   }
   else if(selectedCategory === categories.LAPTOP){
     items = laptops;
-    // console.log("set laptops");
   }
   items.forEach ((phone)=>{
-    // console.log("drawing");
     const element = createItemElement(phone);
     root.append(element);
   })
