@@ -1,4 +1,4 @@
-// alert("Hello world, item page!");
+console.log("item.js loaded! Have a nice day! :)")
 const x = window.location;
 console.log(x);
 const urlParams = new URLSearchParams(window.location.search);
