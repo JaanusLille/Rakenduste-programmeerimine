@@ -6,23 +6,39 @@ const categories = {
   LAPTOP: "laptops",
 };
 
-const selectCategory = categories.PHONE;
+let selectCategory = categories.PHONE;
 
 function createItems(){
+
+  // console.log("createitems", selectedCategory);
   const root = document.getElementById("item-list");
+
+  root.innerHTML = null;
 
   let items = [];
 
   if(selectedCategory === categories.PHONE){
     items = phones;
+    // console.log("set phones");
   }
   else if(selectedCategory === categories.LAPTOP){
     items = laptops;
+    // console.log("set laptops");
   }
   items.forEach ((phone)=>{
+    // console.log("drawing");
     const element = createItemElement(phone);
     root.append(element);
   })
+}
+
+function setupCategoryListener(){
+    const dropdown = document.getElementById("category-dropdown");
+    dropdown.addEventListener('change', (event) => {
+      console.log(event.target.value);
+      selectedCategory = event.target.value;
+      createItems();
+  });
 }
 
 // support function
@@ -53,35 +69,7 @@ function createItemElement(item){
 }
 
 window.addEventListener("load", () =>{
-  console.log("Hello world! :)");
+  console.log("Document loaded, itemsList.js");
   createItems();
+  setupCategoryListener();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <!-- <a href="./item.html?title=Mitsubishi&cost=20&src=./images/phone1.jpg">
-//   <div class="item">
-//     <img src="./images/phone1.jpg"/>
-//     <div class="item__title">Mitsubishi</div>
-//     <div class="item__price">20 EUR</div>
-//   </div>
-// </a>
